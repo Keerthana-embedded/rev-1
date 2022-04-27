@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define max 5
+int a[max];
+int top=-1;
+void push (int );
+int pop();
+int main()
+{
+	int n,element;
+	while(1)
+	{
+		printf("1)push 2)pop 3)exit\n");
+		scanf("%d",&n);
+		switch(n)
+		{
+			case 1:
+				printf("enter elements\n");
+				scanf("%d",&element);
+				push(element);
+				break;
+			case 2:
+				if(top==-1)
+					printf("stack is empty\n");
+				else
+					printf("elements poped=%d\n",pop());
+				break;
+			case 3:
+				exit(0);
+		}
+	}
+}
+void push(int n )
+{
+	if((top)!=max-1)
+	{
+		a[++top]=n;
+	}
+	else
+		printf("stack is full");
+}
+int pop()
+{
+	/*	int n;
+		n=a[top];  //a[top--]
+		top--;
+		return n;*/
+	return a[top--];
+}
+© 2022 GitHub, Inc.
