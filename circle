@@ -7,4 +7,4 @@ int main()
 	scanf("%f",&radius);
 	circum=2*pi*radius;
 	area=pi*radius*radius;
-	printf("%0.4f......%0.4f",circum,area);
+	//printf("%0.4f......%0.4f",circum,area);
